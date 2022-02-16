@@ -1,0 +1,9 @@
+<div>
+  <h2>Book detail</h2>
+  <p><%= @book.user.name %></p>
+  <p><%= @book.title %></p>
+  <p><%= @book.body %></p>
+  <% if @book.user == current_user %>
+   <%= link_to "destroy",books_path(@book),method: :delete %>
+  <% end %>
+</div>
