@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: "homes#top"
   
   
-  resources :books, only: [:new, :reate,:index, :show, :edit, :destroy]
+  resources :books
   get 'homes/about' => 'homes#about', as: 'about'
-  resources :users, only:[:index, :show, :edit]
+  resources :users
 end
