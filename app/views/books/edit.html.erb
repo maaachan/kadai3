@@ -1,9 +1,5 @@
 
-<% if flash[:notice] %>
-     <p id="notice">
-       <%= flash[:notice] %>
-     </p>
-   <% end %>
+
 <h2>Editing Book</h2>
 
 <%= form_with model: @book do |f| %>
@@ -15,5 +11,7 @@
   <%= f.text_area :body %>
   
   <%= f.submit 'Update Book' %>
+  <%= link_to "Show", book_path%>
+  <%= link_to "Back", books_path %>
   
 <% end %>
